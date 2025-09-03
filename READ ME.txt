@@ -1,0 +1,14 @@
+# Basic usage - process all buildings
+python main.py av_2056.gpkg ./alti3d ./surface3d
+
+# Process only 10 buildings for testing
+python main.py av_2056.gpkg ./alti3d ./surface3d --limit 10
+
+# Process buildings in a specific area (Swiss coordinates)
+python main.py av_2056.gpkg ./alti3d ./surface3d --bbox 2680000 1235000 2681000 1236000
+
+# Save with custom output names
+python main.py av_2056.gpkg ./alti3d ./surface3d -o results.csv -g buildings_3d.gpkg
+
+# Combine options
+python main.py av_2056.gpkg ./alti3d ./surface3d --limit 100 --bbox 2680000 1235000 2681000 1236000 -o test.csv
